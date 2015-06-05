@@ -23,7 +23,7 @@ I am in no way affiliated with the Philips organization.
 # 
 # 1. vanilla: 52% CPU
 # 
-# 2. added return_result=False to set_light(), so we don't juse
+# 2. added return_result=False to set_light(), so we don't use
 # json.decode() to parse the result: 45% CPU
 #
 # 3. use persistent connection (reuse self.connection): 25% CPU

@@ -215,8 +215,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Firefly lighting demo')
     parser.add_argument('-b', '--bridge', help='Bridge IP address')
     parser.add_argument(
-        '-u',
-        '--user',
+        '-u', '--user',
         help='Bridge user name, more info: '
              'http://www.developers.meethue.com/documentation/getting-started')
     parser.add_argument('-p', '--port', help='Webserver port', default=8085)

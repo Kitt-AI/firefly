@@ -27,13 +27,15 @@
       <div class="col-sm-10 col-sm-offset-1" ng-show="!showoverview">
         <table class="table table-condensed table-striped">
           <tr>
-            <td width="50%"><strong>Flat Parse Result</strong></td>
+            <td width="50%"><strong>Flat Parse Result</strong>
+            (<a href="" ng-click="showresult = !showresult">collapse</a>)
+            </td>
             <td width="50%"><strong>API Calling</strong></td>
           </tr>
           <tr data-ng-repeat="result in results">
             <td>
               <!-- <pre style="white-space: pre-wrap;">{{ result[0] }}</pre> -->
-              <div json-human="result[0]"></div>
+              <div json-human="result[0]" ng-show="!showresult"></div>
             </td>
             <td>
               <pre style="white-space: pre-wrap;">{{ result[1] }}</pre>
