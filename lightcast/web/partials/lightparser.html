@@ -1,0 +1,58 @@
+
+<p>
+<p>
+<div ng-controller="ParserCmdCtrl">
+  <p>
+  <p>
+
+  <form name="form" ng-submit='sendSpeechParserCmd(true)' novalidate>
+    <fieldset>
+      <div class="jsSpeechFactory-container">
+        <a href="" class="jsSpeechFactory-btn" ng-click="toggleStartStop()">
+          <img id="speech_icon" ng-src="{{speech.icon}}" class="jsSpeechFactory-icon"/>
+        </a>
+        <input type="text" class="form-control" ng-model="speech.value" ng-trim="false"  ng-keyup="keyPress($event.keyCode)" placeholder="Firefly: Natural Language Interface for Smart Lights"/>
+        Incremental Parsing: <input type="checkbox" ng-model="incremental" ng-click="incrementalClicked()">
+        <p class="text-muted jsSpeechFactory-hint pull-right" ng-bind-html="speech.msg"></p>
+      </div>
+    </fieldset>
+  </form>
+
+  <!-- Answers & Responses -->
+  <div ng-show="results != null">
+    <p>
+    <p>
+    <div class="row">
+      <a href="" ng-click="showoverview = !showoverview"><b>Highlevel API Calling:</b></a>
+      <div class="col-sm-10 col-sm-offset-1" ng-show="!showoverview">
+        <table class="table table-condensed table-striped">
+          <tr>
+            <td width="50%"><strong>Flat Parse Result</strong></td>
+            <td width="50%"><strong>API Calling</strong></td>
+          </tr>
+          <tr data-ng-repeat="result in results">
+            <td>
+              <!-- <pre style="white-space: pre-wrap;">{{ result[0] }}</pre> -->
+              <div json-human="result[0]"></div>
+            </td>
+            <td>
+              <pre style="white-space: pre-wrap;">{{ result[1] }}</pre>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <a href="" ng-click="showtree = !showtree"><b>Hierarchical Parse Tree:</b></a>
+      <div json-human="parse_tree" ng-show="!showtree"></div>
+    </div>
+    <p>
+
+    <div class="row">
+      <a href="" ng-click="showspeech = !showspeech"><b>Speech Output:</b></a>
+      <pre ng-show="showspeech">{{speech|json}}</pre>
+    </div>
+
+  </div>
+</div>

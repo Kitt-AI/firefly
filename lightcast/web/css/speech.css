@@ -1,0 +1,25 @@
+
+/* Put your css in here */
+
+.jsSpeechFactory-container {
+  position:relative;
+  width:100%;
+}
+
+.jsSpeechFactory-hint {
+  display:block;
+  white-space:nowrap;
+  overflow:hidden;
+  padding:4px 5px;
+  font-size: 90%;
+}
+.jsSpeechFactory-btn{
+  display: block;
+  position: absolute;
+  right: 5px;
+  margin: 4px 0;
+}
+.jsSpeechFactory-icon {
+  height:25px;
+  no-repeat left center 80%;
+}
