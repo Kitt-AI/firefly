@@ -1,8 +1,9 @@
 #! /usr/bin/env python
 
-from firebird import *
+from parsetron import *
 from lightcontrol import LightControl
-from grammars.colored_light import ColoredLightGrammar
+from parsetron.grammars.colored_light import ColoredLightGrammar
+import logging
 
 # TODO: dynamically change light name
 
