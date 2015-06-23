@@ -223,9 +223,6 @@ if __name__ == "__main__":
     parser.add_argument('-d', '--debug', help='debug output', default=False)
 
     args = parser.parse_args()
-
-
-    args = parser.parse_args()
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
     else:
@@ -241,6 +238,8 @@ if __name__ == "__main__":
         import getpass
         if getpass.getuser() == 'xuchen':
             username = 'xuchencolor'
+    else:
+        username = args.user
     if not username:
         import sys
         print >> sys.stderr, "Error: you must enter bridge user name with -u"
