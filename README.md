@@ -8,6 +8,9 @@ Interacting with Philips Hue with natural language, powered by Firebird.
 ![Firefly screenshot]
 (/screenshots/firefly-screenshot1.png)
 
+![Firefly screenshot: incremental parsing]
+(/screenshots/incremental.gif)
+
 # How To
 
 `python firebird/lightdemo.py -b bridge_ip -u bridge_username`
